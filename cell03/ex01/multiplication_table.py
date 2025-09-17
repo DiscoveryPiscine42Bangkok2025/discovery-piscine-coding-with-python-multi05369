@@ -3,7 +3,7 @@
 def main():
     """Print multiplication table"""
     number = int(input("Enter a number\n"))
-    for i in range(10):
+    for i in range(13):
         print(f"{i} x {number} = {number * i}")
 
 
