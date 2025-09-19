@@ -63,13 +63,11 @@ def can_capture(board, piece_row, piece_col, target_row, target_col, piece_type)
 
 def can_pawn_capture(piece_row, piece_col, target_row, target_col):
     """
-    Check if pawn can capture target. Pawns capture diagonally forward.
+    Pawns capture one square diagonally upward (toward smaller row index).
     """
-    # Pawn captures diagonally (one square diagonally forward)
     row_diff = target_row - piece_row
     col_diff = abs(target_col - piece_col)
-    
-    return row_diff == 1 and col_diff == 1
+    return row_diff == -1 and col_diff == 1
 
 def can_bishop_capture(board, piece_row, piece_col, target_row, target_col):
     """
